@@ -1,1 +1,121 @@
+/* Reset básico para limpar espaçamentos do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho estiloso com degradê */
+header {
+    background: linear-gradient(135deg, #1f4068, #162447);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Grid que organiza os cards e os deixa responsivos */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito flutuante ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Cores temáticas para cada tecnologia */
+.html-card h2 { color: #e34c26; }
+.css-card h2 { color: #264de4; }
+.js-card h2 { color: #f0db4f; background: #323330; display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+/* Zona interativa do botão */
+.interactive-zone {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.interactive-zone h3 {
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #e43f5a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background-color: #1f4068;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Classes controladas pelo JavaScript */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    color: #27ae60;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #162447;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/* Animação suave para o surgimento da mensagem */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
